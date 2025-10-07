@@ -17,7 +17,7 @@ The Internet (or cloud) is a major gateway for cyber threats. Common sources inc
 - **External attackers**: Hackers attempting unauthorized access to systems.
 
 🔍 **SOC Analysts' Role**  
-Security Operations Center (SOC) analysts continuously monitor [[inbound and outbound traffic]] between internal systems and the internet. They look for:
+Security Operations Center (SOC) analysts continuously monitor inbound and outbound traffic between internal systems and the internet. They look for:
 
 - Unusual patterns
 - Suspicious connections
