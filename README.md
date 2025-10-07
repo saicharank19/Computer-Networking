@@ -40,7 +40,7 @@ Their goal is to detect and respond to threats before damage occurs.
 ## Packet-Filtering Firewall
 ### Definition
 
-A **[packet](#packet)-filtering firewall** is the most basic type of firewall. It inspects each data packet entering or leaving the network and decides whether to allow or block it based on a set of rules.
+A **[packet](packet.md)-filtering firewall** is the most basic type of firewall. It inspects each data packet entering or leaving the network and decides whether to allow or block it based on a set of rules.
 
 ###  How It Works
 
