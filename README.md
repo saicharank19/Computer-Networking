@@ -33,7 +33,9 @@ Critical servers will be deployed under trusted/internal zone. Couple of critica
 
 Lets say the ip address range is 10.10.0/16 which is 2\*\*16 = 65535 ip addresses can be assigned for these servers.
 
-For server side we perform scanning mechanism for secure related control by scanning the servers and identifying vulnerabilities known as vulnerability assessment. Managing and fixing of those vulnerabilities known as vulnerability management which falls under infrastructure security.
+### Infrastructure security/Vulnerability Management
+
+For server side we perform scanning mechanism for secure related control by scanning the servers and identifying vulnerabilities known as **vulnerability assessment**. Managing and fixing of those vulnerabilities known as **vulnerability management** which falls under infrastructure security.
 
 For every month we will do vulnerability assessment and management to fix we need to contact asset owner or server owner next raising the tickets by assigning to the asset owners which will be fixed by them.
 
@@ -125,6 +127,44 @@ A lot of organizations use both network based and host based firewalls where net
 
 Analyst tasks: Check firewall logs for blocked vs. allowed traffic, unusual ports, or brute-force attempts.
 
+##### VPN
+Firewall fall under VPN itself we can also user separate VPN.
+
 ##### NIDS/NIPS
 
 ##### Proxy
+
+##### End User LAN
+End point/Host machines: Employee using an asset is called as end point. Example points are laptop,macbook, workstation, and mobile.
+
+### End Point Security Solutions
+AV/EDR/XDR - Malware prevention
+DLP
+HIDS/HIPS
+FIM
+Data at rest encryption
+Mobile device management (MDM)
+
+
+##### Email security solutions or email gateway
+We have to deploy under the DMZ/DMG zone.
+
+### Application Security / Product / IoT / OT / IIOT
+WAF (Web Application firewall)
+SDDLC
+Criptography
+owasp top 10
+
+
+##### Internet Service Provider Router (ISP)
+Anti DOS/Anti DDOS it will have monitoring tools if any flooding attacks are done by, our attacker either block or quarantining of those attacks.
+
+
+
+##### Internet
+Public network were we get internet.
+
+
+
+each and every internal stack holder like HR Team, Application developing team and SOC team all the employees will fall under end use LAN segmentation part.
+
