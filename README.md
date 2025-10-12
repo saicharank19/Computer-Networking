@@ -282,6 +282,14 @@ This the process of communication between client and server where first client s
 #### TCP 2 way handshake 
 This process is for connection closure first cilent sends the finish flag where server responds with acknowledgement flag.
 
+| TCP|   UDP  |
+|---|---|
+| Transmission Control protocol|  User Datagram Protocol|   
+|It is connection oriented  |  It is not based on connection oriented|   
+|Data is transmitted as brocken packets called segment| Transmitted as datagram|
+|Error Checking | No error checking|
+| TCP is slower due to error check and flow control| UDP is faster due to no error checking   | 
+|This will fall under Trasport Layer or layer 4| This will also fall under Transport Layer or Layer 4|
 
 ---
 
