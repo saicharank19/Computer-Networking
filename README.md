@@ -277,6 +277,11 @@ Transferring data in a sequence order with our error.
 Controls the speed of transferring data.
 
 #### TCP 3 way handshake
+This the process of communication between client and server where first client send sync flag to the server and server acknowledges and send sync+ack flag back to the server, next client after receiving sends back ack flag to the server for sending the request.
+
+#### TCP 2 way handshake 
+This process is for connection closure first cilent sends the finish flag where server responds with acknowledgement flag.
+
 
 ---
 
