@@ -379,21 +379,25 @@ But here starts the game where hackers attack on innocent people online through 
 These 5 devices will taken care by network administrator/engineers they perform configuration implement, trouble shooting,
 managing and maintaining like any upgrade in the routers or switches.
 
-##### Router
+#### Router
 
 Router is a network connector or protocol convertor which is used to connect two different networks, it works on network layer (used for checking ip address) in OSI layer.
 
 Example: When you access www.google.com, your request is broken into packets. These packets don’t travel directly to Google’s server-they pass through a series of routers that examine and forward them along the most efficient path until they reach the destination.
 
-##### Switch
+#### Switch
 
-###### Access Switch
+It is a network device that connects multiple computer devices within a small area of network through LAN.
 
-###### Distributed Switch
+Types of switches
 
-###### Core Switch
+**Access Switch**: It is the first point of network connection to the end user and network. Just like connecting computer devices with lan ports or cables to the switches.
 
-##### Load balancer (LB)
+**Distributed Switch**: Aggregates all the access switch's and provide policy-based connectivity. Which filters the traffic, load balancing.
+
+**Core Switch**: It connects to all the distributed switches and provide high-speed data transfer through out the whole organization. It provides high speed data transfer between distributed switches, data centers and servers which is more reliable.
+
+#### Load balancer (LB)
 
 Balancing the load
 
