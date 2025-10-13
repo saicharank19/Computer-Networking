@@ -494,3 +494,28 @@ Anti DOS/Anti DDOS it will have monitoring tools if any flooding attacks are don
 Public network were we get internet.
 
 each and every internal stack holder like HR Team, Application developing team and SOC team all the employees will fall under end use LAN segmentation part.
+
+### DHCP (Dynamic Host Configure Protocol)
+
+When users computer connected to a network dhcp assigns a ip address automatically. Assigning ip to the system within a lease time where after completing the lease time the ip will be changing or we the system connects to new network it changes.
+
+![DHCP Diagram](/assets/dhcp.png)
+
+Here the network between system and router will be private address and the address between router and Internet will be public address.
+
+**Static IP**: Fixed ip is used for communication. Assigning static ip for huge number of systems in a organization is difficult and time taking process as well. There will be ip conflicts as well due to multiple systems using same ip.
+
+**Dynamic IP**: Changes ip address based on lease time.
+
+### DORA (Discover Offer Request Acknowledgement)
+
+Below steps are followed to get ip address assigned to a system.
+
+1. First sends the **discover** message to the server saying system does'nt have any ip address to connect internet.
+2. From the server it sends a **offer** message with list of available ip's that the system can acquire.
+3. Then host sends a **request** message to acquire specific ip from the given list.
+4. At last DHCP server sends a **acknowledge** message to the host saying host can use the ip addressed asked for.
+
+If there is no availability of IP V4 then server provides IP V6 to the host.
+
+### DNS (Domain Name System)
