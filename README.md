@@ -244,11 +244,11 @@ DNS - Domain Name System (53), DHCP - Domain Host Configure Protocol (67,68),
 
 Process of converting one form data into another.
 
-![Encryption](#encryption), ![Decryption](#decryption)
+[Encryption](#encryption),[Decryption](#decryption)
 
-![Compression](#compression), ![Decompression](#decompression)
+[Compression](#compression),[Decompression](#decompression)
 
-![Encoding](#encoding), ![Decoding](#decoding)
+[Encoding](#encoding), [Decoding](#decoding)
 
 ### 5 Session Layer
 
@@ -256,40 +256,77 @@ Managing the session between client and server.
 
 Session Management
 
-![Authentication](#authentication)
+[Authentication](#authentication)
 
-![Authorization](#authorization)
+[Authorization](#authorization)
 
 ### 4 Transport Layer
 
-Here the data will be transferred from source ip to destination ip with error flow control and data flow.
+Here the data will be transferred from source ip to destination ip with error flow control and data flow. Here data will be transferred in the form of [segments](#segmentation).
 
-#### Segmentation
+**Segmentation**
 
 Dividing large chunk of data into small chunks.
 
-#### Error Flow Control
+**Error Flow Control**
 
 Transferring data in a sequence order with our error.
 
-#### Data Flow Control
+**Data Flow Control**
 
 Controls the speed of transferring data.
 
-#### TCP 3 way handshake
+**TCP 3 way handshake**
 This the process of communication between client and server where first client send sync flag to the server and server acknowledges and send sync+ack flag back to the server, next client after receiving sends back ack flag to the server for sending the request.
 
-#### TCP 2 way handshake 
-This process is for connection closure first cilent sends the finish flag where server responds with acknowledgement flag.
+**TCP 2 way handshake**
+This process is for connection closure first client sends the finish flag where server responds with acknowledgement flag.
 
-| TCP|   UDP  |
-|---|---|
-| Transmission Control protocol|  User Datagram Protocol|   
-|It is connection oriented  |  It is not based on connection oriented|   
-|Data is transmitted as brocken packets called segment| Transmitted as datagram|
-|Error Checking | No error checking|
-| TCP is slower due to error check and flow control| UDP is faster due to no error checking   | 
-|This will fall under Trasport Layer or layer 4| This will also fall under Transport Layer or Layer 4|
+| TCP                                                   | UDP                                                  |
+| ----------------------------------------------------- | ---------------------------------------------------- |
+| Transmission Control protocol                         | User Datagram Protocol                               |
+| It is connection oriented                             | It is not based on connection oriented               |
+| Data is transmitted as brocken packets called segment | Transmitted as datagram                              |
+| Error Checking                                        | No error checking                                    |
+| TCP is slower due to error check and flow control     | UDP is faster due to no error checking               |
+| This will fall under Trasport Layer or layer 4        | This will also fall under Transport Layer or Layer 4 |
+
+### 3. Network Layer
+
+It provided end-to-end communication between two devices for source and destination using path determination by using ip address. Here **IP packets** are for data transfer through network.
+
+**IP address**: consists of header(source and destination ip), payload(actual message or data).
+
+**Path determination**: Choosing best path for data transfer.
+Data will be transferred through ip address or logical address.
+
+**Routing Protocols:**
+
+1. Static route: data will be transferred in a fixed path.
+2. Dynamic Route: based on routing traffic path is changed while transferring data.
+3. Multi caste routing: Consists of multiple path for transferring data.
+4. RIP (Routing Information Protocol): It is old method of dynamic router for data transfer through computers to choose best routing path.
+
+### 2. Data Link Layers
+
+It transfers data from source to destination in the form of frames.
+
+##### Frames
+
+It is type of data that consists of header, payload and trailer. Here the data is transferred in a local network LAN(ethernet cables).
+
+**Header**
+Consists of MAC address of source and destination devices.
+
+Example: Data is transferring from computer to print where both MAC address will be stores in the header.
+
+**Payload**
+
+Stores IP packets which contains source and destination ip address from the upper-layer data, ip packets is actually used in [Network Layer](#3-network-layer).
+
+### 1. Physical Layer
+
+It provides end to end connection between two devices through physical medium. Example: LAN cable, ethernet. Here data is transferred through **bits**.
 
 ---
 
