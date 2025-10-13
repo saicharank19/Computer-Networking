@@ -519,3 +519,15 @@ Below steps are followed to get ip address assigned to a system.
 If there is no availability of IP V4 then server provides IP V6 to the host.
 
 ### DNS (Domain Name System)
+
+It is used to convert / resolve the domain name into ip address.
+
+As a user we search for a domain name (netflix.com) but for the communication only binary code will be understood by the system. Where DNS helps to resolve the domain name into ip address.
+
+First if we try to search a domain our browser will check that domain in the local browser cache if its available then it will directly redirect to that domain if it not available then it will be request to DNS resolver as **recursive query** for the ip address from the DNS server where there are 3 parts in DNS server they are:
+
+**Root Server:** So after request if root server have ip address for that domain it will redirect to the domain directly else it will suggest to ask for TLD Server which is the 2nd part.
+
+**TLD Server (Top Level Domains):** Here there be all world top level domains around 13 like .gov, .mil, .edu ..etc. If the ip address is available same it redirects else it forwards to the 3rd part which is authentative server.
+
+**Authentative Server:** It is a ip pool where almost every ip address that are missing from the above two parts will be found here after redirecting to the ip address browser will stores the ip in cache. If the ip address is not found here as well then this means the domain is not registered.
