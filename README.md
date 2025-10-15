@@ -21,7 +21,7 @@
   - [Authorization](#authorization)
   - [CIA](#cia-confidentiality-integrity-availability)
 
-- [Ports and Protocols]()
+- [Ports and Protocols](#ports-and-protocols)
 
 ### What is computer networking?
 
