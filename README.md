@@ -21,7 +21,7 @@
   - [Authorization](#authorization)
   - [CIA](#cia-confidentiality-integrity-availability)
 
--
+- [Ports and Protocols]()
 
 ### What is computer networking?
 
@@ -260,7 +260,7 @@ It is the top most layer in OSI layer which provides network to the end user for
 
 Website: HTTP(80), HTTPS(443)
 
-Messaging: SMTP - Simple Mail Transfer Protocol (25) used for sending and receiving messages, Pop 3 - Post Office Protocol (110) used for downloading messages to local folder, IMAP - Internet Message Access Protocol (143) used to manage the messages or organizing, ICMP - Internet Control Message Protocol,
+Messaging: SMTP - Simple Mail Transfer Protocol (25) used for sending and receiving messages, Pop 3 - Post Office Protocol (110) used for downloading messages to local folder, IMAP - Internet Message Access Protocol (143) used to for retrieving emails from a mail server, ICMP - Internet Control Message Protocol,
 Terminal: SSH - Secure Shell (22), RDP - Remote Desktop Protocol (3389)
 
 File Transfer:: FTP - File Transfer Protocol (20,21), SFTP - Secure File Transfer Protocol (22), NFS - Network File Sharing
@@ -643,3 +643,60 @@ Subnet masking is used to divide large network into small network chunks.
 MAC address is a unique identifier for a physical data transferring devices which will be assigned at the manufacturing level itself. It will be 48 bits of size so $2^{48}$ addresses are available. MAC address will be in the format of hexadecimal which is alphanumeric and it has 8 octants separated by colons(:).Example format: 00:1A:2B:3C:4D:5E
 
 Example: Router, LAN cable ...etc.
+
+---
+
+### Ports And Protocols
+
+### Protocols
+
+It is **set of rules** used for communication between devices over a network for smooth data transmitting and receiving.
+
+Example: HTTPS -> Web browsing, SMTP -> Mailing, FTP -> File Sharing ...etc.
+
+### Ports
+
+Ports is a **logical end point** used for application to identify the process or which type of network service.
+
+IP Address is for identifying the device for network communication. It's like a town or village name.
+
+Port is for identifying which application to receive network or data in a system. It's like a house number.
+
+Total there 65,535 ports and divided into 3 parts.
+
+| Port Ranges   | Type                           | Description                               |
+| ------------- | ------------------------------ | ----------------------------------------- |
+| 0 - 1023      | Well known ports/ System ports | Network services like HTTPS, FTP, SMTP    |
+| 1024 - 49151  | Registered Ports               | For custom apps like My Sql.              |
+| 49152 - 65534 | Private Ports                  | Used For client communication temporarily |
+
+There are two types of ports:
+
+**Open port:** Here network actively accepts traffic which is not safe any cost.
+
+**Closed Port:** It is safe for data transmitting and receiving.
+
+**Commonly Used ports and protocols**
+
+| Protocols                                   | Description                                                                                              | Ports                    |
+| ------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------ |
+| HTTP (Hyper Text Transfer Protocol)         | Used for web-browsing which is not secure.                                                               | 80                       |
+| HTTPS (Hyper Text Transfer Protocol Secure) | Used for secure web-browsing.                                                                            | 443                      |
+| FTP (File Transfer Protocol)                | File transferring over a network not secured                                                             | 20, 21                   |
+| SFTP (Secure File Transfer Protocol)        | Secure File transferring over a network                                                                  | 22                       |
+| SMTP (Simple Mail Transfer Protocol)        | Sending and receiving mails over a network                                                               | 25                       |
+| DNS (Domain Name Server)                    | Resolving domain name into ip address.                                                                   | 53                       |
+| DHCP (Domain Host Configure Protocol)       | Dynamic assigning of ip address to a system.                                                             | 67 (server), 68 (client) |
+| SSL (Secure Socket Layer)                   | Establishing secure connection between web browser and server                                            | 443                      |
+| TLS (Transport Layer Security)              | Used for same SSL purpose by fixing SSL vulnerabilities                                                  | 443                      |
+| NTP (Network Time Protocol)                 | Used to synchronize your tool time with the local time.                                                  | 123                      |
+| SMB (Server Message Blocking)               | Used for file transferring an messaging over a network                                                   | 445                      |
+| IMAP (Internet Message Access Protocol)     | Retrieving messages over a network                                                                       | 143                      |
+| ICMP (Internet Control Message Protocol)    | Sending error messages to the source host if there is any attack or suspicious over a network connection | no port                  |
+| POP3                                        | Used to download messages to the local folder                                                            | 110                      |
+| SCP (Secure Copy Protocol)                  | Used transfer data over a network by using SSH encryption and authentication                             | 22                       |
+| Telnet                                      | Remote login, not secured                                                                                | 23                       |
+| SSH (Secure Shell)                          | Remote Login and command execution                                                                       | 22                       |
+| RDP (Remote Desktop Protocol)               | Remote login through windows to windows                                                                  | 3389                     |
+| Kerberos                                    | Mutual authentication for both client and server while transmitting files over a insecure network        | 88                       |
+| MySql                                       | Database for storing and managing data.                                                                  | 3306                     |
