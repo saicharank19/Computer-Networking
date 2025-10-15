@@ -1,5 +1,28 @@
 ## Computer Networking
 
+## 📚 Table of Contents
+
+- [ What is computer networking](#what-is-computer-networking)
+- [Network Security Fundamentals](#network-security-fundamentals)
+- [Types of Computer Networks](#types-of-computer-networks)
+
+  - [LAN](#lan-local-area-network)
+  - [WAN](#wan-wide-area-network)
+  - [MAN](#man-metropolitan-area-network)
+
+- [Network Monitoring and Security](#network-monitoring-and-security)
+
+  - [Log](#log)
+  - [SIEM](#siem-security-information-and-event-management)
+  - [SOC](#soc-security-operation-center)
+  - [DC - Data Center](#dc-data-center-on-premise)
+  - [DC - Domain Controller](#dc-domain-controller)
+  - [Authentication](#authentication)
+  - [Authorization](#authorization)
+  - [CIA](#cia-confidentiality-integrity-availability)
+
+-
+
 ### What is computer networking?
 
 Computer networking is known for communication between computer devices (computer, printers) by exchanging information between them.
@@ -7,6 +30,8 @@ Computer networking is known for communication between computer devices (compute
 It works both wired and wireless methods through wired mode like ethernet cables and wireless like bluetooth, wi-fi or nearby sharing.
 
 ---
+
+### Types of Computer Networks
 
 ### LAN (Local Area Network)
 
@@ -30,7 +55,11 @@ Example: Let's say each LAN from the diagram refers to different locations to co
 
 It is a computer network that connects all computer devices within a city or metro station using public network or internet.
 
-Note: LAN is a subset of MAN.
+## Note: LAN is a subset of MAN.
+
+---
+
+### Network Monitoring and Security
 
 ### Log
 
@@ -45,8 +74,6 @@ Example: Windows laptop logs
 Application, Audit or Security, System, Config
 
 All the above logs will be integrated to SIEM tool using different log integration methods.
-
----
 
 ### SIEM (Security Information and Event Management)
 
@@ -69,8 +96,6 @@ It is done by SIEM TOOL.
 #### Incident alert notification generation
 
 Any hacking or any malicious activity happen SIEM will give alerts via email for L1,L2,L3 team we have to do instant investigation.
-
----
 
 ### SOC (Security Operation Center)
 
@@ -97,6 +122,8 @@ Validating the credentials whether they have access to that particular website, 
 Note: Authorization is always provide from backed server **WHO ARE YOU**.
 
 ---
+
+### Network Security Fundamentals
 
 ### CIA (Confidentiality, Integrity, Availability)
 
@@ -330,7 +357,7 @@ It provides end to end connection between two devices through physical medium. E
 
 ---
 
-#### Network Diagram
+### Network Diagram
 
 ![Network Diagram](/assets/network-diagram.png)
 
@@ -356,7 +383,7 @@ Critical servers will be deployed under trusted/internal zone. Couple of critica
 
 Lets say the ip address range is 10.10.0/16 which is 2\*\*16 = 65535 ip addresses can be assigned for these servers.
 
-### Infrastructure security/Vulnerability Management
+#### Infrastructure security/Vulnerability Management
 
 For server side we perform scanning mechanism for secure related control by scanning the servers and identifying vulnerabilities known as **vulnerability assessment**. Managing and fixing of those vulnerabilities known as **vulnerability management** which falls under infrastructure security.
 
@@ -369,13 +396,13 @@ It act as a boundary between trust zone and untrust zone.
 
 After scanning in developing and testing environment we will use tools like nessus which generates results automatically, then we have to do the manual vulnerability analysis then we have the report our asset support team/ business support team/ patch management team Then they will complete patch updates then we have the recheck with the patch update whether the vulnerabilities are really fixed are not.
 
-##### Internet
+#### Internet
 
 It is a global network that connects billions of computer devices and mobiles by exchanging information. Which gives access for surfing internet, mails, social media.
 
 But here starts the game where hackers attack on innocent people online through phishing emails, malicious websites.
 
-### Networking Devices
+#### Networking Devices
 
 These 5 devices will taken care by network administrator/engineers they perform configuration implement, trouble shooting,
 managing and maintaining like any upgrade in the routers or switches.
@@ -439,7 +466,7 @@ FIM
 Data at rest encryption
 Mobile device management (MDM)
 
-##### Firewall
+#### Firewall
 
 Firewall is a system that prevents unauthorized access like ip's, ports entering into the private network. It creates safety barrier between private network and public network.
 
@@ -459,7 +486,7 @@ This a firewall rule set table where we can see permission depends on ports in t
 
 Protocol TCP will be discussed further.
 
-###### Types of Firewalls
+**Types of Firewalls**
 
 1. Host Based Firewall
    It protects a individual computer where the software firewall has been installed.
@@ -467,7 +494,7 @@ Protocol TCP will be discussed further.
 2. Network Based Firewall
    It is combination of both hardware and software firewall where it protects entire network.
 
-Types in network based firewall:
+**Types in network based firewall:**
 
 1. Stand-alone Firewall: Which is used by large organizations.
 2. Built-in Firewall: Router have a built-in firewall which is lot of smaller organization relay on.
@@ -477,11 +504,11 @@ A lot of organizations use both network based and host based firewalls where net
 
 Analyst tasks: Check firewall logs for blocked vs. allowed traffic, unusual ports, or brute-force attempts.
 
-##### VPN
+#### VPN
 
 Firewall fall under VPN itself we can also user separate VPN.
 
-##### Email security solutions or email gateway
+#### Email security solutions or email gateway
 
 We have to deploy under the DMZ/DMG zone.
 
@@ -492,15 +519,13 @@ SDDLC
 Criptography
 owasp top 10
 
-##### Internet Service Provider Router (ISP)
+#### Internet Service Provider Router (ISP)
 
 Anti DOS/Anti DDOS it will have monitoring tools if any flooding attacks are done by, our attacker either block or quarantining of those attacks.
 
-##### Internet
+#### Internet
 
-Public network were we get internet.
-
-each and every internal stack holder like HR Team, Application developing team and SOC team all the employees will fall under end use LAN segmentation part.
+Public network were we get internet. Each and every internal stack holder like HR Team, Application developing team and SOC team all the employees will fall under end use LAN segmentation part.
 
 ### DHCP (Dynamic Host Configure Protocol)
 
@@ -538,6 +563,8 @@ First if we try to search a domain our browser will check that domain in the loc
 **TLD Server (Top Level Domains):** Here there be all world top level domains around 13 like .gov, .mil, .edu ..etc. If the ip address is available same it redirects else it forwards to the 3rd part which is authentative server.
 
 **Authentative Server:** It is a ip pool where almost every ip address that are missing from the above two parts will be found here after redirecting to the ip address browser will stores the ip in cache. If the ip address is not found here as well then this means the domain is not registered.
+
+---
 
 ### DNS Records
 
@@ -583,6 +610,14 @@ To detect threat is from public or private address by the SOC analyst there few 
 | Class E | 240.0.0.0           | 255.255.255.255   | Researching         |
 
 For loop backup offline downloading **127.0.0.1** is used. You need too purchase public ip's from IANA (Internet Assign Numbering Authority).
+
+IP Ranges formula:
+
+from class B 128/2 + 128 = **64** + 128 = 192 (starting of class C) - 1 (ending of class B)
+
+from class C **64/2** + 192 = **32** + 192 = 224 (starting of class D) - 1 (ending of class C)
+
+from class D **32/2** + 224 = **16** + 224 = 240 (starting of class E) - 1 (ending of class E)
 
 **Private IP Address:**
 
