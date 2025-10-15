@@ -414,7 +414,30 @@ NOC: Noc team functionality is monitoring and fixing the network or application 
 
 ### Network security Domains/Solution or Perimeter Solutions
 
-If one layer (NGFW) is bypassing the attacks, second layer will prevent or block, in case second layer (Proxy) is bypassing then third layer (NIDS/NIPS) and so on. This layering is called as **Defense Depth Layer Approach**.
+If one layer (NGFW) is bypassing the attacks, second layer will prevent or block, in case second layer (Proxy) is bypassing then third layer (NIDS/NIPS) and so on. This layering is called as **Defense Depth Layer Approach** or **Onion Layer approach** just like onions there will be multiple layers of protection for data to prevent attacks.
+
+##### NIDS/NIPS (Network Intrusion Detection/ Prevention System)
+
+**NIDS** will watch and report which means it monitors the network traffic for any suspicious activity it alerts the administrator.
+
+**NIPS** will prevent like blocking the traffic if there is any suspicious activity.
+
+##### Proxy
+
+Used to proxy IP address which gives **fake ip address** by hiding the original ip address.
+
+##### End User LAN
+
+End point/Host machines: Employee using an asset is called as end point. Example points are laptop,macbook, workstation, and mobile.
+
+### End Point Security Solutions
+
+AV/EDR/XDR - Malware prevention
+DLP
+HIDS/HIPS
+FIM
+Data at rest encryption
+Mobile device management (MDM)
 
 ##### Firewall
 
@@ -457,23 +480,6 @@ Analyst tasks: Check firewall logs for blocked vs. allowed traffic, unusual port
 ##### VPN
 
 Firewall fall under VPN itself we can also user separate VPN.
-
-##### NIDS/NIPS
-
-##### Proxy
-
-##### End User LAN
-
-End point/Host machines: Employee using an asset is called as end point. Example points are laptop,macbook, workstation, and mobile.
-
-### End Point Security Solutions
-
-AV/EDR/XDR - Malware prevention
-DLP
-HIDS/HIPS
-FIM
-Data at rest encryption
-Mobile device management (MDM)
 
 ##### Email security solutions or email gateway
 
