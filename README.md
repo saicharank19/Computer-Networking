@@ -295,7 +295,7 @@ This process is for connection closure first client sends the finish flag where 
 
 It provided end-to-end communication between two devices for source and destination using path determination by using ip address. Here **IP packets** are for data transfer through network.
 
-**IP address**: consists of header(source and destination ip), payload(actual message or data).
+**IP Packets**: consists of header(source and destination ip), payload(actual message or data).
 
 **Path determination**: Choosing best path for data transfer.
 Data will be transferred through ip address or logical address.
@@ -333,6 +333,7 @@ It provides end to end connection between two devices through physical medium. E
 #### Network Diagram
 
 ![Network Diagram](/assets/network-diagram.png)
+
 Every Network diagram will have three zones they are
 
 1. Trust/Internal Zone
@@ -531,3 +532,73 @@ First if we try to search a domain our browser will check that domain in the loc
 **TLD Server (Top Level Domains):** Here there be all world top level domains around 13 like .gov, .mil, .edu ..etc. If the ip address is available same it redirects else it forwards to the 3rd part which is authentative server.
 
 **Authentative Server:** It is a ip pool where almost every ip address that are missing from the above two parts will be found here after redirecting to the ip address browser will stores the ip in cache. If the ip address is not found here as well then this means the domain is not registered.
+
+### DNS Records
+
+There are few DNS protocols to assign domain name to ip address or vise-versa.
+
+| Record Name                  | Purpose                                                                              |
+| ---------------------------- | ------------------------------------------------------------------------------------ |
+| A                            | Assigning domain name to IP V4.                                                      |
+| AAAA (Quad Record)           | Assigning or converting domain name to IP V6.                                        |
+| MX (Mail Exchanger)          | Sending and receiving email through the server.                                      |
+| CNAME (Canonical Name)       | Providing alias name for the domain name.                                            |
+| TXT (Text Record)            | Storing the information of SPF, DMA, DMARC (found in gmail) for domain verification. |
+| SOA (Start Of Authority)     | Storing the information of domain administrators.                                    |
+| PTR (Pointer Reverse Record) | Converting IP Address to domain name which is also known as DNS reverse.             |
+
+### IP Address (Internet Protocol)
+
+IP address is for a system to communicate with servers or other systems, where ip address will be assigned once it is connected to internet. IP address is a **unique identifier** of a system.
+
+**IP V4:** The size of the ip address V4 is 32 bits where the available addresses would be $2^{32}$ which is almost 4 billion. Format would be decimal with 4 octets(1 oct = 8 bites which is 4\*oct = 32 bits) separated by (.) with 8 bits each.
+
+Example format: 192.168.0.1
+
+**IP V6:**The size of the ip address V6 is 128 bits where the available addresses would be $2^{128}$ which is almost more than a trillion. Format would be with 16 octets(1 oct = 8 bites which is 16\*oct = 128 bits) separated by (:) with 8 bits each.
+
+Example Format: 2001:0db8:85a3:0000:0000:8a2e:0370:7334
+
+There are two types of ip addresses:
+
+1. Static IP Address: It is fixed ip address assigned manually for each system.
+2. Dynamic IP Address: Changes dynamically based on lease time with the help of [DHCP](#dhcp-dynamic-host-configure-protocol).
+
+To detect threat is from public or private address by the SOC analyst there few classes in both public and private IP's.
+
+**Public IP Address:**
+
+| Classes | Starting IP Address | Ending IP Address | Use case            |
+| ------- | ------------------- | ----------------- | ------------------- |
+| Class A | 0.0.0.0             | 126.255.255.255   | Large MNC's         |
+| Class B | 128.0.0.0           | 191.255.255.255   | Mid range companies |
+| Class C | 192.0.0.0           | 223.255.255.255   | Small companies     |
+| Class D | 224.0.0.0           | 239.255.255.255   | Gaming              |
+| Class E | 240.0.0.0           | 255.255.255.255   | Researching         |
+
+For loop backup offline downloading **127.0.0.1** is used. You need too purchase public ip's from IANA (Internet Assign Numbering Authority).
+
+**Private IP Address:**
+
+| Classes | Starting IP Address | Ending IP Address |
+| ------- | ------------------- | ----------------- |
+| Class A | 10.0.0.0            | 10.255.255.255    |
+| Class B | 172.16.0.0          | 172.31.255.255    |
+| Class C | 192.68.0.0          | 192.68.255.255    |
+
+**Subnet Masking**
+
+Subnet masking is used to divide large network into small network chunks.
+
+| CIDR - Classless Inter Domain Routing | Subnet Mask     |
+| ------------------------------------- | --------------- |
+| /8                                    | 255.0.0.0       |
+| /16                                   | 255.255.0.0     |
+| /24                                   | 255.255.255.0   |
+| /30                                   | 255.255.255.252 |
+
+### MAC Address
+
+MAC address is a unique identifier for a physical data transferring devices which will be assigned at the manufacturing level itself. It will be 48 bits of size so $2^{48}$ addresses are available. MAC address will be in the format of hexadecimal which is alphanumeric and it has 8 octants separated by colons(:).Example format: 00:1A:2B:3C:4D:5E
+
+Example: Router, LAN cable ...etc.
